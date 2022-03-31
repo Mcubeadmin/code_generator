@@ -7,7 +7,7 @@ for i in range(loadNum):
     splitdata = data.split(",")
     Lists.append(splitdata)
 
-print(Lists)
 
 for i in range(loadNum):
     print("LOAD " + str(i+1) + " LOADTYPE " + Lists[i][0] + " TITLE " + Lists[i][1])
+
