@@ -7,7 +7,10 @@ for i in range(loadNum):
     splitdata = data.split(",")
     Lists.append(splitdata)
 
-
+print("\n")
 for i in range(loadNum):
     print("LOAD " + str(i+1) + " LOADTYPE " + Lists[i][0] + " TITLE " + Lists[i][1])
 
+eq = input("Enter the equation to be generated: ")
+eq = eq.split(" ")
+print(eq)
