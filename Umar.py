@@ -27,12 +27,29 @@ for i in range(loadNum):
 print(countList)
 
 
-#load line code generation
-print("\n")
-for i in range(loadNum):
-    print("LOAD " + str(i+1) + " LOADTYPE " + Lists[i][0] + " TITLE " + Lists[i][1])
 
 #equation input
 eq = input("\nEnter the equation to be generated: ")
 eq = eq.split(" ")
-print(eq)
+eqint = []
+for element in eq:
+    eqint.append(float(element))
+
+print(eqint)
+print(type(eqint))
+eqinput = int(input("Which load to repeat: "))
+iter = int(countList[eqinput - 1][1])
+print(iter)
+
+#load line code generation
+print("\n")
+for i in range(loadNum):
+    print("LOAD " + str(i+1) + " LOADTYPE " + Lists[i][0] + " TITLE " + Lists[i][1])
+for i in range(iter):
+    count = 101 + i
+    print("Load Combination " + str(count))
+    print(*eqint, sep = ' ')
+    for j in range(len(eqint)):
+        if eqint[j] == eqinput:
+            eqint[j] = eqint[j] + 1
+          
