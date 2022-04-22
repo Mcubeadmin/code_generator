@@ -27,7 +27,6 @@ for i in range(loadNum):
 print(countList)
 
 
-
 #equation input
 eq = input("\nEnter the equation to be generated: ")
 eq = eq.split(" ")
@@ -52,4 +51,6 @@ for i in range(iter):
     for j in range(len(eqint)):
         if eqint[j] == eqinput:
             eqint[j] = eqint[j] + 1
+            eqinput = eqinput + 1
+            break
           
